@@ -17,5 +17,7 @@ object LoadingApp extends App {
     MessageTag("tag5")
   )
 
-  hub ! LoadMessagesForTags(messageTagsForLoading)
+  val workerPoolSize = 2
+
+  hub ! StartProcessing(messageTagsForLoading, workerPoolSize)
 }

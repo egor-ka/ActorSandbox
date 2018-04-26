@@ -1,6 +1,6 @@
 package actor_tests
 
-object FileSystem {
+object FakeFileSystem {
   def saveBytesToFile(storedMessage: StoredMessage): Boolean = {
     // saving message
     Thread.sleep(1000)
